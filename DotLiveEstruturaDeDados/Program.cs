@@ -91,8 +91,31 @@ var contemVideo3 = youTubePlaylist.Contains("Video3");
 Console.WriteLine($"Contem video 3: {contemVideo3}");
 
 Console.WriteLine($"Tamanho da Playslist: {youTubePlaylist.Count}");
+Console.WriteLine();
+
+Console.WriteLine("-----------------");
 
 //Dicionário
+Dictionary<string, string> dicionarioTraducao = new Dictionary<string, string>
+{
+    {"Confirm", "Confirmar" },
+    { "Cancel", "Cancelar" },
+    { "Home", "Inicio" },
+    { "Job Role",  "Cargo" }
+};
 
+Console.WriteLine($"Tradução de Cancel: {dicionarioTraducao["Cancel"]}");
+
+if(dicionarioTraducao.TryGetValue("Cancel", out var traducao))
+{
+    Console.WriteLine($"Tradução de Cancel é: {traducao}");
+}
+else
+{
+    Console.WriteLine("Palavra não encontrada");
+}
+Console.WriteLine();
+
+Console.WriteLine("-----------------");
 
 //Lista Ligada
