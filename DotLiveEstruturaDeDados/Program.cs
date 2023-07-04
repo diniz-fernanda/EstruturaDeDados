@@ -75,7 +75,22 @@ for(var i = 0; i < notas2d.GetLength(0); i++)
     Console.WriteLine();
 }
 //HashSet
+HashSet<string> youTubePlaylist = new HashSet<string>();
 
+youTubePlaylist.Add("Video1");
+youTubePlaylist.Add("Video2");
+youTubePlaylist.Add("Video3");
+youTubePlaylist.Add("Video2");
+
+Console.WriteLine($"Tamanho da Playlist: {youTubePlaylist.Count}");
+
+youTubePlaylist.Remove("Video2");
+
+var contemVideo3 = youTubePlaylist.Contains("Video3");
+
+Console.WriteLine($"Contem video 3: {contemVideo3}");
+
+Console.WriteLine($"Tamanho da Playslist: {youTubePlaylist.Count}");
 
 //Dicionário
 
