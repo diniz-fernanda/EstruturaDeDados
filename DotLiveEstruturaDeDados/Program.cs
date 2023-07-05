@@ -74,6 +74,9 @@ for(var i = 0; i < notas2d.GetLength(0); i++)
 
     Console.WriteLine();
 }
+
+Console.WriteLine("-----------------");
+
 //HashSet
 HashSet<string> youTubePlaylist = new HashSet<string>();
 
@@ -81,6 +84,8 @@ youTubePlaylist.Add("Video1");
 youTubePlaylist.Add("Video2");
 youTubePlaylist.Add("Video3");
 youTubePlaylist.Add("Video2");
+
+Console.WriteLine("HashSet");
 
 Console.WriteLine($"Tamanho da Playlist: {youTubePlaylist.Count}");
 
@@ -103,6 +108,7 @@ Dictionary<string, string> dicionarioTraducao = new Dictionary<string, string>
     { "Home", "Inicio" },
     { "Job Role",  "Cargo" }
 };
+Console.WriteLine("Dicionário");
 
 Console.WriteLine($"Tradução de Cancel: {dicionarioTraducao["Cancel"]}");
 
@@ -116,6 +122,48 @@ else
 }
 Console.WriteLine();
 
+Dictionary<string, Dictionary<string, string>> dicionarioTraducaoV2 = new Dictionary<string, Dictionary<string, string>>
+{
+    { "pt", new Dictionary<string, string>{
+        { "Confirm", "Confirmar" },
+        { "Cancel", "Cancelar" }
+    }},
+    { "en", new Dictionary<string, string>{
+        { "Confirm", "Confirm" },
+        { "Cancel", "Cancel" }
+    }},
+    { "es", new Dictionary<string, string>{
+        { "Confirm", "Confirmar" },
+        { "Cancel", "Cancelar" }
+    } }
+};
+
+var selecionarLinguagem = "pt";
+
+Console.WriteLine($"Confirm in Portuguese is {dicionarioTraducaoV2[selecionarLinguagem]["Confirm"]}");
+
 Console.WriteLine("-----------------");
 
 //Lista Ligada
+Console.WriteLine("Lista Ligada");
+
+LinkedList<string> playlist = new LinkedList<string>();
+
+playlist.AddLast("Pretty Fly");
+playlist.AddLast("The Kids Aren't Alright");
+playlist.AddLast("You're Gonna Go Far, Kid");
+
+foreach(var musica in playlist)
+{
+    Console.WriteLine(musica);
+}
+
+playlist.Remove("The Kids Aren't Alright");
+Console.WriteLine();
+playlist.AddFirst("Gone away");
+
+foreach(var musica in playlist)
+{
+    Console.WriteLine(musica);
+}
+Console.WriteLine("-----------------------");
